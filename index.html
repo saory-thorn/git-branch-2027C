@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RF-Clothe | Premium Fashion Store</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Top Announcement Bar -->
+    <div class="announcement-bar">
+        🚚 Free Worldwide Shipping on Orders Over $100! Use Code: <strong>RF2026</strong>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">RF-<span>CLOTHE</span></div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#shop">Shop</a></li>
+                <li><a href="#sale">Sale</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            <div class="cart-btn" id="cart-btn">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count">0</span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Slide-Out Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3>Your Shopping Bag</h3>
+            <i class="fa-solid fa-xmark close-cart" id="close-cart"></i>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Dynamic Cart Items Will Appear Here -->
+            <p class="empty-msg">Your bag is currently empty.</p>
+        </div>
+        <div class="cart-footer">
+            <div class="total-price">
+                <span>Total:</span>
+                <span id="cart-total">$0.00</span>
+            </div>
+            <button class="btn btn-primary checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+    <div class="cart-overlay" id="cart-overlay"></div>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <span class="tagline">New Summer Collection 2026</span>
+            <h1>Elegance In Every Detail</h1>
+            <p>Upgrade your everyday wardrobe with our handpicked luxury outfits.</p>
+            <div class="hero-btns">
+                <a href="#shop" class="btn btn-primary">Explore Collection</a>
+                <a href="#sale" class="btn btn-secondary">View Sale</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Showcase -->
+    <section id="categories" class="categories-section">
+        <div class="section-header">
+            <h2>Shop by Category</h2>
+            <p>Find what you're looking for easily</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card cat-women">
+                <div class="cat-info">
+                    <h3>Women's Wear</h3>
+                    <a href="#shop">Browse <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card cat-men">
+                <div class="cat-info">
+                    <h3>Men's Collection</h3>
+                    <a href="#shop">Browse <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="category-card cat-acc">
+                <div class="cat-info">
+                    <h3>Accessories</h3>
+                    <a href="#shop">Browse <i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="shop" class="products-section">
+        <div class="section-header">
+            <h2>Trending Right Now</h2>
+            <p>Our top-selling products of the week</p>
+        </div>
+
+        <div class="product-grid">
+
+            <div class="product-card" data-id="1" data-name="Over-Sized Streetwear Hoodie" data-price="49.99">
+                <div class="badge">Hot</div>
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1556905055-8f358a7a47b2?w=600" alt="Hoodie">
+                </div>
+                <div class="product-details">
+                    <span class="category">Men / Unisex</span>
+                    <h3>Over-Sized Streetwear Hoodie</h3>
+                    <div class="stars">★★★★★</div>
+                    <div class="price-row">
+                        <span class="price">$49.99</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="2" data-name="Minimalist Summer Dress" data-price="65.00">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=600" alt="Dress">
+                </div>
+                <div class="product-details">
+                    <span class="category">Women</span>
+                    <h3>Minimalist Summer Dress</h3>
+                    <div class="stars">★★★★☆</div>
+                    <div class="price-row">
+                        <span class="price">$65.00</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="3" data-name="Classic Denim Jacket" data-price="89.99">
+                <div class="badge sale-badge">-20%</div>
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1543076447-215ad9ba6923?w=600" alt="Jacket">
+                </div>
+                <div class="product-details">
+                    <span class="category">Outerwear</span>
+                    <h3>Classic Denim Jacket</h3>
+                    <div class="stars">★★★★★</div>
+                    <div class="price-row">
+                        <span class="price">$89.99 <del>$110.00</del></span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-card" data-id="4" data-name="Luxury Designer Sunglasses" data-price="35.00">
+                <div class="img-box">
+                    <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=600" alt="Sunglasses">
+                </div>
+                <div class="product-details">
+                    <span class="category">Accessories</span>
+                    <h3>Luxury Designer Sunglasses</h3>
+                    <div class="stars">★★★★☆</div>
+                    <div class="price-row">
+                        <span class="price">$35.00</span>
+                        <button class="add-cart-btn"><i class="fa-solid fa-plus"></i> Add</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Discount Promo Banner -->
+    <section id="sale" class="promo-banner">
+        <div class="promo-content">
+            <span>LIMITED TIME OFFER</span>
+            <h2>Get 30% Off Your First Purchase</h2>
+            <p>Use promo code <strong>RFVIP</strong> at checkout page.</p>
+            <a href="#shop" class="btn btn-primary">Claim Discount</a>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <h2>Subscribe To Our Newsletter</h2>
+        <p>Get instant updates on new arrivals, sales, and fashion tips.</p>
+        <form id="news-form">
+            <input type="email" placeholder="Enter your email address..." required>
+            <button type="submit" class="btn btn-primary">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <div class="logo">RF-<span>CLOTHE</span></div>
+                <p>Premium quality fashion designed to bring confidence to your everyday look.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#shop">Shop</a></li>
+                    <li><a href="#categories">Categories</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RF-Clothe Store. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
